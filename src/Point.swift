@@ -2,8 +2,8 @@ import Foundation
 
 struct Point: Identifiable {
     let id = UUID()
-    let x: Double
-    let y: Double
+    var x: Double
+    var y: Double
 
     init(x: Double, y: Double) {
         self.x = x
