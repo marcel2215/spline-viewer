@@ -1,1 +1,1 @@
-# spline-viewer
+# Spline Viewer
