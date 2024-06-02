@@ -60,9 +60,9 @@
 		1FAB73D32C0CD10F006E121A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1FAB73CE2C0CD10F006E121A /* Preview Content */,
 				1FAB73CF2C0CD10F006E121A /* Assets.xcassets */,
 				1FAB73D02C0CD10F006E121A /* ContentView.swift */,
+				1FAB73CE2C0CD10F006E121A /* Preview Content */,
 				1FAB73D12C0CD10F006E121A /* SplineViewer.entitlements */,
 				1FAB73D22C0CD10F006E121A /* SplineViewerApp.swift */,
 			);

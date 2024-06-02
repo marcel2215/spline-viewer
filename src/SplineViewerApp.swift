@@ -1,10 +1,3 @@
-//
-//  SplineViewerApp.swift
-//  SplineViewer
-//
-//  Created by Marcel Kwiatkowski on 2024-06-02.
-//
-
 import SwiftUI
 
 @main
