@@ -11,6 +11,7 @@
 		1FAB73D52C0CD10F006E121A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAB73CF2C0CD10F006E121A /* Assets.xcassets */; };
 		1FAB73D62C0CD10F006E121A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB73D02C0CD10F006E121A /* ContentView.swift */; };
 		1FAB73D72C0CD10F006E121A /* SplineViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB73D22C0CD10F006E121A /* SplineViewerApp.swift */; };
+		1FAB73D92C0CD460006E121A /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB73D82C0CD460006E121A /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		1FAB73D02C0CD10F006E121A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1FAB73D12C0CD10F006E121A /* SplineViewer.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SplineViewer.entitlements; sourceTree = "<group>"; };
 		1FAB73D22C0CD10F006E121A /* SplineViewerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplineViewerApp.swift; sourceTree = "<group>"; };
+		1FAB73D82C0CD460006E121A /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
