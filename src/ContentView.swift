@@ -4,6 +4,15 @@ import Charts
 struct ContentView: View {
     @State private var spline = CubicSpline()
     @State private var chartColor = Color.blue
+    @State private var parameter = 0.0
+    @State private var isShowingDerivatives = false
+
+    let decimalFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+
+        return formatter
+    }()
 
     var body: some View {
         VStack {
@@ -21,10 +30,10 @@ struct ContentView: View {
                         ForEach($spline.points, id: \.id) { $point in
                             HStack {
                                 Text("X: ")
-                                TextField("X", value: $point.x, formatter: NumberFormatter())
+                                TextField("X", value: $point.x, formatter: decimalFormatter)
                                 Stepper("", value: $point.x, in: 0...1000)
                                 Text("Y: ")
-                                TextField("Y", value: $point.y, formatter: NumberFormatter())
+                                TextField("Y", value: $point.y, formatter: decimalFormatter)
                                 Stepper("", value: $point.y, in: 0...1000)
                                 Button {
                                     spline.points.removeAll {$0.id == point.id }
@@ -56,6 +65,29 @@ struct ContentView: View {
                     })
                 } label: {
                     Text("Settings")
+                }
+            }
+            GroupBox {
+                DisclosureGroup("Derivatives") {
+                    HStack {
+                        Text("Parameter:")
+                        TextField("Parameter", value: $parameter, formatter: decimalFormatter)
+                        Button("Calculate") {
+                            isShowingDerivatives = true
+                        }
+                    }
+                    .sheet(isPresented: $isShowingDerivatives) {
+                        VStack {
+                            Text("Parameter: \(parameter)")
+                            Text("Value: \(spline.interpolatedValue(at: parameter))")
+                            Text("First derivative: \(spline.firstDerivative(at: parameter))")
+                            Text("Second derivative: \(spline.secondDerivative(at: parameter))")
+                            Button("Close") {
+                                isShowingDerivatives = false
+                            }
+                        }
+                        .padding()
+                    }
                 }
             }
         }
